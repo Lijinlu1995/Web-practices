@@ -1,0 +1,247 @@
+/*
+* @Author: Administrator
+* @Date:   2018-07-02 09:30:34
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-07-04 11:56:20
+*/
+.jd {
+	position: relative;
+}
+.jd-inner {
+	height: 480px;
+	position: relative;
+	z-index: 1;
+}
+.ad {
+	height: 480px;
+	background: url(../images/bg.png) no-repeat top center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	/*position 会转换为行内块，一定要给宽度*/
+}
+.ad a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.jd-clo1 {
+	width: 190px;
+	height: 465px;
+	background-color: #6E6568;
+	float: left;
+	padding-top: 15px;
+}
+.jd-clo1 li {
+	padding-left: 10px;
+	height: 28px;
+	line-height: 28px;
+}
+.jd-clo1 li:hover {
+	padding-left: 10px;
+	height: 28px;
+	line-height: 28px;
+	color: #999395;
+}
+.jd-clo1 li a {
+	color: #fff;
+	font-size: 14px;
+}
+.jd-clo1 li span {
+	color: #fff;
+	font-size: 12px;
+}
+.jd-clo2 {
+	width: 790px;
+	height: 480px;
+	float: left;
+	margin-left: 10px;
+}
+.arr-l, .arr-r {
+	font-family: "icomoon";
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	height: 45px;
+	margin-top: -30px;
+	background: rgba(0, 0 ,0, 0.3);
+	color: #fff;
+	font-size: 25px;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 15px;
+}
+.arr-l {
+	left: 0;
+}
+.arr-r {
+	right: 0;
+}
+.jd-clo2-hd {
+	height: 340px;
+	margin-bottom: 10px;
+	position: relative;
+}
+.jd-clo2-hd ol {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -90px;
+	width: 180px;
+	height: 20px;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+}
+.jd-clo2-hd ol li {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	float: left;
+	background-color: #fff;
+	margin: 3px 5px;
+	cursor: pointer;
+}
+.jd-clo2-hd current {
+	background-color: #f10215;
+}
+.jd-clo2-bd div {
+	width: 390px;
+	height: 130px;
+	float: left;
+}
+.jd-clo2-bd div img {
+	width: 100%;
+}
+.fristoic {
+	margin-right: 10px;
+}
+.jd-clo3 {
+	width: 190px;
+	height: 480px;
+	float: right;
+}
+.jd-clo3 a {
+	font-size: 12px;
+	color: #747474;
+}
+.user {
+	height: 95px;
+	padding: 20px 15px 0;
+}
+.user-info {
+	height: 40px;
+	padding-left: 54px;
+	font-size: 12px;
+	color: #747474;
+	line-height: 22px;
+	position: relative;
+}
+.user-info a {
+	font-size: 12px;
+	color: #747474;
+}
+.user-info a:hover {
+	color: #f10215;
+}
+.info-img {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.info-img img {
+	width: 100%;
+	height: auto;
+}
+.user-profit {
+	margin-top: 14px;
+}
+.user-profit a {
+	width: 70px;
+	height: 20px;
+	border: 3px solid #f10215;
+	color: #f10215;
+	display: inline-block;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+	margin-right: 1px;
+}
+.user-profit a:hover {
+	background-color: #f10512;
+	color: #fff;
+}
+.news {
+	height: 149px;
+	border-top: 1px solid #ccc;
+	padding: 5px 15px 0;
+	border-bottom: 1px solid #ccc;
+}
+.tab-hd {
+	border-bottom: 1px solid #ccc;
+	padding: 3px 0;
+	position: relative;
+}
+.tab-hd a {
+	font-size: 12px;
+	color: #747474;
+	margin: 0 4px;
+
+}
+.sale {
+	border-right: 1px solid #ccc;
+	padding-right: 10px;
+}
+.news .more1 {
+	position: absolute;
+	top: 6px;
+	right: 0;
+}
+.line {
+	width: 28px;
+	height: 2px;
+	background-color: #f10215;
+	position: absolute;
+	bottom: -1px;
+}
+.tab-bd {
+	margin-top: 2px;
+}
+.tab-bd li {
+	height: 23px;
+	line-height: 23px;
+}
+.jd-service {
+	height: 209px;
+	overflow: hidden;
+}
+.jd-service ul {
+	width: 220px;
+}
+.jd-service li {
+	width: 47px;
+	height: 69px;
+	float: left;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.jd-service li a {
+	width: 100%;
+	height: 100%;
+	height: auto;
+	display: block;
+}
+.jd-service i {
+	display: block;
+	width: 24px;
+	height: 24px;
+	margin: 15px auto 8px;
+	background: url(../images/sprite_fs@1x.png) no-repeat;
+}
+.jd-service p {
+	text-align: center;
+}
