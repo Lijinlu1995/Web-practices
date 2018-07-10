@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 字数不一样多， 的情况不容易给宽，高度可以定 -->
+	<style>
+		body {
+			background: url(images/wx.jpg) repeat-x;
+		}
+		.nav li {
+			float: left;
+		}
+		.nav a {
+			height: 33px;
+			display: inline-block;
+			line-height: 33px; 
+			text-decoration: none;
+			background: url(images/to.png) no-repeat;
+			padding-left: 15px;
+		}
+		.nav span {
+			display: inline-block;
+			background: url(images/to.png) no-repeat right;
+			padding-right: 15px;
+			height: 33px;
+		}
+		.nav a:hover, .nav a:hover span {
+			background-image: url(images/ao.png);
+		}
+	</style>
+</head>
+<body>
+	<ul class="nav">
+		<li>
+			<a href="#">
+				<span>首页</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span>三个字</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span>新闻客户端</span>
+			</a>
+		</li>
+	</ul>
+</body>
+</html>

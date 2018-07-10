@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			list-style: none;
+			position: relative;
+		}
+		.subnav {
+			margin: 0 auto;
+			width: 20px;
+		}
+		.subnav li {
+			width: 20px;
+			height: 20px;
+			margin: 3px 0;
+			background-color: pink;
+			position: relative;
+		}
+		.subnav div {
+			position:absolute;
+			right: 0;
+			top: 0;
+			height: 20px;
+			width: 0px;
+			background-color: purple;
+			transition: all 0.6s;
+		}
+		.subnav li:hover div {
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="subnav">
+		<li>
+			<div></div>
+		</li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</div>
+</body>
+</html>
