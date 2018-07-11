@@ -1,0 +1,230 @@
+/*
+* @Author: Administrator
+* @Date:   2018-07-09 15:19:43
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-07-10 13:32:47
+*/
+body {
+	background-color: #f3f5f7;
+}
+header {
+	width: 1300px;
+	height: 100px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.logo {
+	width: 195px;
+	height: 42px;
+	float: left;
+}
+.logo a {
+	display: block;
+    width: 195px;
+    height: 42px;
+    background: url(../images/logo.png) no-repeat;
+    text-align: -9999px;
+    overflow: hidden;
+}
+nav {
+	float: left;
+    margin-left: 20px;
+}
+nav li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 25px;
+}
+nav li a {
+	display: block;
+	height: 40px;
+	font-size: 18px;
+
+}
+nav li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+.search {
+	width: 410px;
+	height: 40px;
+	float: left;
+	background-color: purple;
+	margin-left: 50px;
+}
+.search input {
+	width: 361px;
+	height: 40px;
+	border: 1px solid #00a4ff;
+	outline: none;
+	padding-left: 10px;
+}
+.search button {
+	width: 49px;
+	height: 40px;
+	border: 0;
+	outline: none;
+	float: right;
+	background: url(../images/fa-search.png) no-repeat;
+}
+.personal {
+	float: right;
+	height: 40px;
+	line-height: 40px;
+	width: 200px;
+}
+.personal dt, .personal dd {
+	float: left;
+}
+.personal s {
+	position: relative;
+	padding: 0 20px;
+	text-decoration: none;
+}
+.personal s::before {
+	content: "";
+	display: block; /*伪元素默认是行内元素*/
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: red;
+	right: 12px;
+	top: 0;
+	position: absolute;
+}
+.personal span img {
+	border-radius: 50%;
+}
+.banner {
+	height: 420px;
+	background-color: #1c036c;
+}
+.inner {
+	position: relative;
+	height: 420px;
+}
+.subnav {
+	position: absolute;
+	width: 190px;
+	left: 0;
+	top: 0;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+	padding-top: 10px;
+}
+.subnav li {
+	padding-left: 20px;
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+}
+.subnav a {
+    font-size: 14px;
+    color: #fff;
+    display: block;
+}
+.subnav a:hover {
+	color: #00b4ff
+}
+.subnav span {
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+.circle {
+	width: 176px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-left: -88px;
+	bottom: 15px;
+}
+.circle i{
+	display: inline-block;
+	height: 13px;
+	width: 13px;
+	background: rgba(255,255,255,.3);
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.1s;
+}
+.circle i:hover {
+	width: 20px;
+	background-color: #fff;
+}
+.timebook {
+	width: 228px;
+	height: 300px;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.timebook dt {
+	height: 50px;
+	background-color: #9bceea;
+	font-weight: 700;
+	color: #fff;
+	line-height: 50px;
+	font-size: 18px;
+	text-align: center;
+}
+.timebook dd {
+	padding: 15px 20px 0;
+	background-color: #fff;
+}
+.timebook dd li {
+	height: 60px;
+	border-bottom: 1px solid #ccc;
+
+	padding-top: 6px;
+}
+.timebook h5 {
+	font-size: 16px;
+	font-weight: normal;
+
+}
+.all {
+	height: 40px;
+	border: 1px solid #22b0ff;
+	color: #22b0ff;
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+}
+.all:hover {
+	background-color: #22b0ff;
+	color: #fff;
+}
+.recommend {
+	margin-top: 10px;
+	height: 60px;
+	line-height: 60px;
+	background-color: #fff;
+	position: relative;
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,.4);
+}
+.rec-l {
+	padding-left: 30px;
+}
+.rec-l a {
+	margin: 0 15px;
+	font-size: 14px;
+}
+.rec-l strong {
+	color: #22b0ff;
+	font-size: 14px;
+	margin-right: 15px;
+}
+..recommend em {
+	position: absolute;
+	right: 20px;
+	bottom: 0;
+} 
+.products {
+
+}
+.pro-hd {
+	height: 40px;
+}
