@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*
+        *JavaScript 分三个部分
+        * ECMAScripe标准：JS的基本用法
+        *DOM Document Object Model 文档对象模型，才做页面的元素
+        * BOM Brower Object Model 浏览器对象模型 操作的是浏览器
+        *
+        * 由文档及文档中的所有元素组成的树型结构图叫树状图（DOM)树
+        * DOM为了操作页面中的标签
+        * */
+    </script>
+</head>
+<body>
+<!--html代码-->
+<!--<input type="button" value="弹窗" onclick="alert('hahahah')">-->
+<!--<input type="button" value="显示效果" id = "btn">-->
+<!--<script>-->
+    <!--document.getElementById("btn").onclick= function () {-->
+        <!--alert("hahhahahah")-->
+    <!--}-->
+<!--</script>-->
+
+<input type="button" value="最终版" id="btn"/>
+<script>
+    var btnObj = document.getElementById("btn");
+    btnObj.onclick=function () {
+        alert("finally")
+    }
+</script>
+</body>
+</html>
