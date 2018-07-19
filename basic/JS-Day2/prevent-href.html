@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //点击超链接，弹出对话框
+    function f1() {
+        console.log("1");
+    }
+    fi();
+</script>
+<a href="https://www.baidu.com" onclick="alert('1'); return false;">baidu</a>
+
+
+<script>
+    function f1() {
+        alert("2");
+        return false;
+    }
+</script>
+<a href="https://www.baidu.com" onclick="return f1();">baidu</a>
+
+
+<a href="https://www.baidu.com" id="baidu">baidu</a>
+<script>
+    document.getElementById("baidu").onclick=function () {
+        alert("3");
+        return false;
+    };
+</script>
+</body>
+</html>
