@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * 获取当前节点的父级节点
+         * consle.log(my$("uu").parentNode);
+         * 获取当前节点的父级元素
+         * consle.log(my$("uu").parentElement);
+
+         * 获取当先节点的子级节点
+         * consle.log(my$("uu").childNodes);
+
+         * 获取当前节点的子级元素
+         * consle.log(my$("uu").children);
+
+         * 获取当前节点的第一个子级节点
+         * consle.log(my$("uu").firstChild);
+
+         * 获取当前节点的第一个子级元素
+         * consle.log(my$("uu").firstElementChild);
+         *
+         * 获取当前节点的最后一个子级节点
+         * console.log(my$("uu").lastChild);
+         * 获取当前节点的最后一个子级元素
+         * console.log(my$("uu").lastElementChild
+         * 获取当前节点的前一个兄弟节点
+         *console.log(my$("uu").previousSibling);
+         * 获取当前节点的前一个兄弟元素
+         * console.log(my$("uu").previousElementSibling);
+         * 获取当前节点的后一个兄弟节点
+         *console.log(my$("uu").nextSibling);
+         * 获取当前节点的后一个兄弟元素
+         * console.log(my$("uu").nextElementSibling);
+         *
+         *
+         * 元素的创建
+         * 1.document.write("标签代码及内容"）；
+         * 如果在页面加载完毕后加载，会覆盖页面内容
+         * 2.父级对象.innerHTML="";
+         * 3.document.createElement("");得到的是一个对象
+         *
+         * 父级元素.appendChild(子级元素对象);
+         * 父级元素.inetBefore(新的子级对象，参照的子级对象)：
+         *
+         * 移除子级元素
+         * 父级元素.removeChild(要覆盖的子级元素对象)
+         *
+         *事件绑定：为同一个元素绑定相同的时间
+         *
+         * 1 对象.onName=function
+         * 2 Object.addEventListener("ActionName",function(),{}false);谷歌，火狐支持 IE8 buzhichi
+         * 3 Object.attachEvent("onclick",function(){});IE8support , google firefox yet
+         *
+         *
+         *
+         */
+
+        //为任意元素，绑定一个事件
+        function addEventListener(element,type,fn) {
+            if(element.addEventListener()){
+                element.addEventListener(type,fn,false);
+            }else if(element.attachEvent){
+                element.attachEvent("on"+type,fn);
+            }else {
+                element["on"+type] =fn;
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
