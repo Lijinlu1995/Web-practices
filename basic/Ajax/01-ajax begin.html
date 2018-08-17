@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Begin</title>
+</head>
+<body>
+<script>
+    //创建一个XMLHttpRequest类型的对象相当于打开了一个浏览器 ReadyState 0
+    var xhr = new XMLHttpRequest();
+    //打开一个网址之间的连接-相当于在地址栏中输入访问地址
+    xhr.open('GET',"./time.php");
+    //通过连接发送一次请求相当于回车或者发送访问的请求
+    xhr.send(null);
+    //制定xhr的状态处理函数相当于处理网页呈现后的操作
+    xhr.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            console.log(this);
+        }
+    }
+
+</script>
+</body>
+</html>

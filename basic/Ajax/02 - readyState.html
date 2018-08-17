@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>readyState</title>
+</head>
+<body>
+<script>
+    /**
+     * readyState 时间实在xhr对象状态变化的额时候触发（不单单只是得到相应之时）
+     *
+     *
+     *   0    UNSENT  代理（XHR)被创建蛋并没用调用opend的方法
+     *   1    OPENED  open()方法已经被调动了，建立了连接
+     *   2    HEADERS_RECEIVED send()方法已被调用，而且可以获取状态行和响应头
+     *   3    LOADING 响应体下载中，responseText 属性可能已经包含部分数据
+     *   4    DONE    响应体下载完成，可以直接使用responseText
+     */
+    var xhr = new XMLHttpRequest();
+    console.log(xhr.readyState);
+    //=> 0
+    //代理请求对象
+
+    xhr.open('GET', 'time.php');
+    console.log(xhr.readyState);
+    //=>方法已被调用，建立一个与服务器特定端口的连接
+
+    xhr.send()
+
+    xhr.addEventListener('readyStetechange',function(){
+        switch(this.readyState){
+            case 2:
+                //=>2
+                // 已经接收到了响应报文的响应头
+
+                //可以拿到头
+                console.log(this.getAllResponseHeaders());
+                console.log(this.getResponseHeader());
+                //此时还没有拿到响应体
+                break;
+            case 3:
+                //正在loading响应体但有可能不完整也有可能为空
+                //在这里处响应体并不保险
+                console.log(this.responseText);
+                break;
+            case 4:
+                //every thing is OK
+                break;
+        }
+    });
+    xhr.onreadystatechange =function () {
+        if(this.readyState===4){
+            //....
+        }
+    }
+    xhr.onreadystatechange =
+</script>
+</body>
+</html>
