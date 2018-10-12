@@ -1,6 +1,6 @@
 
 ### 手写AJAX：
-' var xhr = new XMLHttpRequest();
+` var xhr = new XMLHttpRequest();
    xhr.open("GET","api",false);
    xhr.onreadyStateChange = function(){
       if(xhr.readyState == 4){
@@ -9,7 +9,7 @@
          }
       }
    }
-   xhr.send(null); '
+   xhr.send(null); `
    
 
 ### 创建对象有哪些方式？
