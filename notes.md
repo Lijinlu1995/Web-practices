@@ -39,3 +39,20 @@ this一般情况下：是全局对象Global。 作为方法调用，那么this�
 >foo.call(this,arg1,arg2,arg3) == foo.apply(this, arguments)==this.foo(arg1, arg2, arg3)
 
 参考：http://blog.csdn.net/myhahaxiao/article/details/6952321
+
+### 创建ajax过程
+1. 创建XMLHttpRequest对象,也就是创建一个异步调用对象.
+1. 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.
+1. 设置响应HTTP请求状态变化的函数.
+1. 发送HTTP请求.
+1. 获取异步调用返回的数据.
+1. 使用JavaScript和DOM实现局部刷新.   
+
+` function startRequest(){   
+    createXMLHttpRequest();//第一步: 创建XMLHttpRequest对象,也就是创建一个异步调用对象.  
+    xmlHttp.onreadystatechange = handleStateChange;//第二步: 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.  
+    xmlHttp.open("GET", "simpleResponse.txt", true);///第三步: 设置响应HTTP请求状态变化的函数.  
+    xmlHttp.send(null);//第四步: 发送请求  
+}
+`
+##
