@@ -1,15 +1,15 @@
 
 ### 手写AJAX：
-> var xhr = new XMLHttpRequest();
-xhr.open("GET","api",false);
-xhr.onreadyStateChange = function(){
-   if(xhr.readyState == 4){
-      if(xhr.status == 200){
-         alart(xhr.responseText);
+   var xhr = new XMLHttpRequest();
+   xhr.open("GET","api",false);
+   xhr.onreadyStateChange = function(){
+      if(xhr.readyState == 4){
+         if(xhr.status == 200){
+            alart(xhr.responseText);
+         }
       }
    }
-}
-xhr.send(null);
+   xhr.send(null);
 
 ### 创建对象有哪些方式？
 (工 构 原 混 动 寄 稳）
