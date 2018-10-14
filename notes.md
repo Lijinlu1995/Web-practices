@@ -267,3 +267,107 @@ Javascript无阻塞加载具体方式：
 - Comet，是一种服务器向页面推送数据的技术。两种方式可实现，长轮询和流。
 - SSE，服务器发送事件。SSE API用于创建到服务器的单向连接，服务器通过这个连接可以发送任意数量的数据。
 - Web Sockets API
+
+### 38.js延迟加载的方式有哪些？
+
+1. defer和async
+2. 动态创建DOM方式（创建script，插入到DOM中，加载完毕后callBack）
+3. 按需异步载入js
+
+### 39.如何判断当前脚本运行在浏览器还是node环境中？
+通过判断 Global 对象是否为window，如果不为window，当前脚本没有运行在浏览器中。
+即在node中的全局变量是global ,浏览器的全局变量是window。 可以通过该全局变量是否定义来判断宿主环境
+
+### 40.说几条JavaScript的基本规范？
+1.不要在同一行声明多个变量。  
+2.请使用 ===/!==来比较true/false或者数值   
+3.使用对象字面量替代new Array这种形式  
+4.不要使用全局函数。  
+5.Switch语句必须带有default分支  
+6.函数不应该有时候有返回值，有时候没有返回值。  
+7.For循环必须使用大括号  
+8.If语句必须使用大括号  
+9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。
+### 41.Flash、Ajax各自的优缺点，在使用中如何取舍？
+
+Flash：
+
+1. Flash适合处理多媒体、矢量图形、访问机器
+2. 对CSS、处理文本上不足，不容易被搜索
+
+Ajax：
+
+1. Ajax对CSS、文本支持很好，支持搜索
+2. 多媒体、矢量图形、机器访问不足
+
+共同点：
+
+1. 与服务器的无刷新传递消息
+2. 可以检测用户离线和在线状态
+2. 操作DOM
+
+### 45.编程实现函数柯里化
+> 函数式编程curry的概念： 只传递给函数一部分参数来调用函数，然后返回一个函数去处理剩下的参数。     
+简单的例子如：
+		
+		function add(num1,num2){
+			return num1+num2;
+		}
+		
+		function curriedAdd(num2){
+			return add(5,num2);
+		}
+		
+		alert(add(2,3));   //5
+		alert(curriedAdd(3));   //8
+
+### 46.web应用从服务器主动推送Data到客户端有哪些方式？
+- html5提供的Websocket
+- 不可见的iframe
+- WebSocket通过Flash
+- XHR长时间连接
+- XHR Multipart Streaming
+- <script\>标签的长时间连接(可跨域)
+### 47.是否设计过通用的组件？
+请设计一个 Dialog（弹出层） / Suggestion（自动完成） / Slider（图片轮播） 等组件,你会提供什么接口？调用过程是怎样的？可能会遇到什么细节问题？
+
+### 48.用JavaScript脚本为Array对象添加一个去除重复项的方法。（数组去重） 
+   
+	return Arrays.from(new Set(arr));
+
+### 49.null和undefined的区别？         
+
+null是一个表示"无"的对象，转为数值时为0  
+undefined是一个表示"无"的原始值，转为数值时为NaN   
+
+当声明的变量还未被初始化时，变量的默认值为undefined    
+null用来表示尚未存在的对象，常用来表示函数企图返回一个不存在的对象    
+
+undefined表示 “缺少值”，就是此处应该有一个值，但是还没有定义。典型用法是：
+    
+1. 变量被声明了，但没有赋值时，就等于 undefined    
+2. 调用函数时，应该提供的参数没有提供，该参数等于 undefined     
+3. 对象没有赋值的属性，该属性的值为 undefined    
+4. 函数没有返回值时，默认返回 undefined   
+
+null表示“没有对象”，即该处不应该有值。典型用法是：
+1. 作为函数的参数，表示该函数的参数不是对象
+2. 作为对象原型链的终点
+### 50.js实现继承的几种方式？
+
+1. 原型链继承
+2. 借用构造函数继承
+3. 组合继承(原型+借用构造)
+4. 原型式继承
+5. 寄生式继承
+6. 寄生组合式继承
+### 51.webSocket 如何兼容低浏览器？ 
+
+		Adobe Flash Socket 、 ActiveX HTMLFile (IE) 、 基于 multipart 编码发送 XHR 、 基于长轮询的 XHR 
+### 52.JS和ECMAScript的区别和联系？
+ECMAScript是JavaScript的规范，JavaScript是ECMAScript的实现。
+   
+s是一种专为与网页交互而设计的脚本语言，由下列三个不同部分组成：  
+核心ECMAScript，提供核心语言功能；   
+文档对象模型（DOM），提供访问和操作网页内容的方法和接口；   
+浏览器对象模型（BOM），提供与浏览器交互的方法和接口。
