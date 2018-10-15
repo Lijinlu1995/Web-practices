@@ -371,3 +371,37 @@ s是一种专为与网页交互而设计的脚本语言，由下列三个不同�
 核心ECMAScript，提供核心语言功能；   
 文档对象模型（DOM），提供访问和操作网页内容的方法和接口；   
 浏览器对象模型（BOM），提供与浏览器交互的方法和接口。
+
+	function setCookie(name, value, expires, path, domain, secure) {
+	   var cookieText = encodeURIComponent(name) + '=' + encodeURIComponent(value);
+	   if (expires instanceof Date) {
+		cookieText += '; expires=' + expires;
+	   }
+	   if (path) {
+		cookieText += "; path=" + path     }
+	   if (domain) {
+		cookieText += '; domain=' + domain;
+	   }
+	   if (secure) {
+		cookieText += '; secure';
+	   }
+	   document.cookie = cookieText;
+	}
+
+	function getCookie(name) {
+	   var cookieName = encodeURIComponent(name) + '=';
+	   var cookieStart = document.cookie.indexOf(cookieName);
+	   var cookieValue = null;
+	   if(cookieStart > -1){
+	      var cookieEnd = document.cookie.indexOf(';', cookieStart);
+	      if(cookieEnd == -1){
+		 cookieEnd = document.cookie.length;
+	      }
+	      cookieValue = decodeURIComponent(document.cookie.substring(cookieStart + cookieName.length, cookieEnd));
+	   }
+	   return cookieValue;
+	}
+
+	function unsetCookie(name) {
+	   document.cookie = name + "= ; expires=" + new Date(0);
+	}
