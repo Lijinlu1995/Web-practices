@@ -1,6 +1,6 @@
 # HTML and CSS
 
-### 1.什么是盒子模型？
+### 盒子模型？
     （1）有两种， IE 盒子模型、标准 W3C 盒子模型；IE的content部分包含了 border 和 pading;
 
     （2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border).
@@ -15,12 +15,14 @@ src:是指向外部资源的位置，指向的内容将会嵌入到文档中当�
 ### css中如何设置英文首字母大写？
 在相应的元素中设置text-transform的属性值为text-transform:capitalize。
 
-### 4.是否应该支持ie6？
+### 是否应该支持ie6？
 2014年4月，微软就停止了对XP系统和IE6浏览器的支持，已经很多年了，用XP和IE6的用户已经很少很少了。我觉得作为一个前端开发者，不必要一味迁就这些用户，应当适当推动他们改变，这对技术的发展也是有好处的。
-### 5.px、em、rem的区别
+
+### px、em、rem的区别
 - px是相对于显示器的像素而言的；em是相对于当前对象内的字体尺寸而言，如果行内字体大小没有被设置，则是默认相对于浏览器字体尺寸；而rem是相对于根元素字体的大小而言。
 - 1em = 16px，1rem = 16px。为什么是这样，因为所有未经调整的浏览器字体大小都是16px；
 - IE9及以上的版本兼容rem。
+
 ### 6.写出几种解决IE6Bug的方法
 
 1.双边距BUG float引起的 使用display  
@@ -31,6 +33,7 @@ src:是指向外部资源的位置，指向的内容将会嵌入到文档中当�
 6.Min-height 最小高度 !Important 解决  
 7.select 在ie6下遮盖 使用iframe嵌套  
 8.为什么没有办法定义1px左右的宽度容器(IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px)
+
 ### 7.css的引入方式有哪些?link和@import的区别是什么?
 引入方式有：内嵌 、内联 、嵌入
 link是HTML的方法，@import是CSS的方法。
@@ -137,3 +140,164 @@ Javascript方面
 移动方面
  
 - 保证组件小于25k
+### CSS有哪些继承属性
+- 关于文字排版的属性如：
+	- font
+	- text-align
+	- text-shadow(文字阴影)
+	- text-transform(控制文本的大小写)
+	- text-indent（规定文本块中首行文本的缩进）
+	- word-spacing（改变字（单词）之间的标准间隔）
+	- letter-spacing（修改字符或字母之间的间隔）
+	- word-break（）
+- line-height
+- color
+- visibility
+- cursor
+
+### 12.Web前端项目的结构是怎样的？文件有哪些命名规范？
+js、css、html、图片、数据文件分类命名。
+
+### 13.css样式书写有哪些规范？
+- 书写顺序  
+1.位置属性(position, top, right,z-index, display, float等)  
+2.大小(width, height, padding,margin)  
+3.文字系列(font, line-height,letter-spacing, color- text-align等)   
+4.背景(background, border等)      
+5.其他(animation, transition等)
+- 书写规范
+- 命名规范。标签的选择以及class、id属性要符合语义化。
+- 注释规范。/* 这样的注释规范 */
+
+### 14.iframe有哪些缺点？
+
+优点：
+
+1. 解决加载缓慢的第三方内容如图标和广告等的加载问题
+2. Security sandbox
+3. 并行加载脚本
+
+缺点：
+
+1. iframe会阻塞主页面的Onload事件
+2. 即时内容为空，加载也需要时间
+3. 没有语意
+
+### 15.元素定位有哪些？
+position是元素定位属性：
+
+- absolute绝对定位   
+相对位置为父元素为非static的第一个父元素进行定位。
+- fixed 固定定位（老IE6不支持）   
+相对于浏览器窗口进行定位。 
+- relative相对定位    
+相对于其正常（默认布局）位置进行定位。
+-  static   
+默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right z-index 声明）  
+
+所有的定位如果left、top、right、bottom属性都为默认值，则为默认定位
+absolute定位会脱离文档，浮动起来，多个层重叠可以使用z-index属性改变层叠顺序
+absolute定位忽略padding，相对位置为相对定位容器的左上角内边框，
+
+### ::before和：before有什么区别？ 
+
+- 相同点  
+    - 都可以用来表示伪类对象，用来设置对象前的内容       
+	- :befor和::before写法是等效的
+- 不同点   
+	- :befor是Css2的写法，::before是Css3的写法   
+    - :before的兼容性要比::before好 ，不过在H5开发中建议使用::before比较好
+    
+### 17.CSS的优先级是怎样的？
+!important>id>class>tap
+
+### 18.如何居中一个元素？
+- 元素水平居中的方式
+	- 行级元素水平居中对齐：在父元素中设置一个text-align:center;
+	- 块级元素水平居中对齐：父元素设置text-align:center，该元素自身设置为margin:0 auto;
+	- 浮动元素水平居中对齐：
+		- 可以在外层加一个div，外层的div采用margin居中，里层的div设置宽度为100%。
+		- 设置当前div的宽度，然后设置margin-left:50%; position:relative; left:-250px;其中的left是宽度的一半。
+- 元素垂直居中对齐
+	- 行级元素垂直居中：对行级元素垂直居中（heiht与line-height的值一样）
+	- 块级元素垂直居中：
+		- 父元素高度固定:父元素的height与line-height值相同;需要垂直居中的元素
+			> vertical-align:middle;// 垂直居中对齐     
+ 			display:inline|inline-block //块级元素转行级元素   
+		- 父元素高度不固定：设置父元素的padding-top和padding-bottom一样 
+		
+### 19.为什么要初始化样式？
+因为浏览器的兼容的问题，不同浏览器有些标签的默认值是不同的，如果没有CSS初始化往往会出现浏览器之间的
+
+### 20.用纯CSS创建一个三角形的原理是什么？
+border：分别设置上下左右border属性，然后将其他的border设置为transparent。
+
+### 21.CSS样式-如何清除元素浮动？
+1、clear:both；  
+2、overflow:hidden；   
+3、浮动父元素；   
+4、在浮动元素的后面添加一个去除浮动的元素。  
+
+
+### 22.CSS3有哪些新特性？
+
+1. CSS3实现圆角（border-radius），阴影（box-shadow），
+2. 对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+3. transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);// 旋转,缩放,定位,倾斜
+4. 增加了更多的CSS选择器  多背景 rgba
+5. 在CSS3中唯一引入的伪类是 ::selection.
+6. 媒体查询，多栏布局
+7. border-image
+
+### 23.html5有哪些新特性、移除了那些元素？
+
+新特性：   
+HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。
+
+1. 拖拽释放(Drag and drop) API 
+2. 语义化更好的内容标签（header,nav,footer,aside,article,section）
+3. 音频、视频API(audio,video)
+4. 画布(Canvas) API
+5. 地理(Geolocation) API
+6. 本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失；
+7. sessionStorage 的数据在浏览器关闭后自动删除
+8. 表单控件，calendar、date、time、email、url、search  
+9. 新的技术webworker, websocket, Geolocation
+
+移除的元素：   
+
+1. 纯表现的元素：basefont，big，center，font, s，strike，tt，u；
+2. 对可用性产生负面影响的元素：frame，frameset，noframes；
+
+支持HTML5新标签：   
+  
+1. IE8/IE7/IE6支持通过 document.createElement 方法产生的标签，可以利用这一特性让这些浏览器支持 HTML5 新标签，浏览器支持新标签后，还需要添加标签默认的样式（当然最好的方式是直接使用成熟的框架、使用最多的是html5shiv框架）：  
+	
+		<!--[if lt IE 9]> 
+		<script> src="http://html5shiv.googlecode.com/svn/trunk/html5.js"</script> 
+		<![endif]--> 
+
+如何区分： 
+DOCTYPE声明新增的结构元素、功能元素
+
+
+### 24.img标签上title和alt属性的区别是什么？
+alt当图片不显示时是文字代表  
+title为该属性提供信息
+### 25.页面优化有哪些方法？
+- 代码层面：避免使用css表达式，避免使用高级选择器，通配选择器。
+- 缓存利用：缓存Ajax，使用CDN，使用外部js和css文件以便缓存，添加Expires头，服务端配置Etag，减少DNS查找等
+- 请求数量：合并样式和脚本，使用css图片精灵，初始首屏之外的图片资源按需加载，静态资源延迟加载。
+- 请求带宽：压缩文件，开启GZIP，
+- 代码层面的优化  
+   - 用hash-table来优化查找  
+   - 少用全局变量
+   - 用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能
+   - 用setTimeout来避免页面失去响应
+   - 缓存DOM节点查找的结果
+	- 避免使用CSS Expression
+	- 避免全局查询
+	- 避免使用with(with会创建自己的作用域，会增加作用域链长度)
+	- 多个变量声明合并
+	- 避免图片和iFrame等的空Src。空Src会重新加载当前页面，影响速度和效率
+	- 尽量避免写在HTML标签中写Style属性
