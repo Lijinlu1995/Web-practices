@@ -1,6 +1,7 @@
 
 ### 手写AJAX：
     var xhr = new XMLHttpRequest();
+      //
       xhr.open("GET","api",false);
       xhr.onreadyStateChange = function(){
          if(xhr.readyState == 4){
