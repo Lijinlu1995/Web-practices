@@ -23,7 +23,7 @@ src:是指向外部资源的位置，指向的内容将会嵌入到文档中当�
 - 1em = 16px，1rem = 16px。为什么是这样，因为所有未经调整的浏览器字体大小都是16px；
 - IE9及以上的版本兼容rem。
 
-### 6.写出几种解决IE6Bug的方法
+### 6.写出几种解决IE6Bug的方
 
 1.双边距BUG float引起的 使用display  
 2.像素问题 使用float引起的 使用dislpay:inline -3px  
